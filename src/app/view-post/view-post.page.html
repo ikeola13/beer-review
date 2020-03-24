@@ -1,0 +1,33 @@
+<ion-content [fullscreen]="true">
+  <div class="close-bod">
+
+
+    <ion-icon name="close" class="close" (click)="dismiss()"></ion-icon>
+  </div>
+  <div class="all-bod">
+
+    Beer Name:
+    <div class="data">{{name}}</div>
+
+    Brewer:
+    <div class="data">{{brewer}}</div>
+
+    Price:
+    <div class="data"> ${{price}}</div>
+
+    Serving Type:
+    <div class="data">{{serving}}</div>
+
+    Rating:
+    <div class="data">
+      <ion-rating rate={{rating}} readonly="false" size="default"></ion-rating>
+    </div>
+
+    Description:
+    <div class="data"> {{des}}</div>
+
+    Posted on:
+    <div class="data">{{posted}}</div>
+
+  </div>
+</ion-content>

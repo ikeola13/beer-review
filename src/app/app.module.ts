@@ -8,11 +8,20 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginPipe } from './login.pipe';
+import { CreatePostPage } from './create-post/create-post.page';
+
+import { IonicRatingModule } from 'ionic-rating';
+import { IonicStorageModule } from '@ionic/storage';
+import { ViewPostPage } from './view-post/view-post.page';
+
+
+
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  declarations: [AppComponent, LoginPipe, CreatePostPage, ViewPostPage],
+  entryComponents: [CreatePostPage,ViewPostPage],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, IonicRatingModule, IonicStorageModule.forRoot()],
   providers: [
     StatusBar,
     SplashScreen,
@@ -20,4 +29,4 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

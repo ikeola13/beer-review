@@ -1,0 +1,69 @@
+<ion-content>
+
+  <ion-icon name="close-circle" class="close" (click)="dismiss()"></ion-icon>
+
+  <div class="page-title">
+    New Post
+  </div>
+
+  <ion-list lines="full" class="ion-no-margin ion-no-padding">
+    <ion-item>
+      <ion-label position="stacked">Beer Name <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-input class="lin" type="text" #name></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Brewer <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-input class="lin" type="text" #brewer></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Date <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-input class="lin" type="Date" #date></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Price($) <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-input class="lin" type="number" #price></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Serving Type<ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-select value="bottle" okText="Okay" cancelText="Dismiss" #serving>
+        <ion-select-option value="bottle">Bottle</ion-select-option>
+        <ion-select-option value="draft">Draft</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Rating <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-select value="1" okText="Okay" cancelText="Close" #rating>
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+        <ion-select-option value="5">5</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Description<ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-textarea #des maxlength="250" class="lin"></ion-textarea>
+    </ion-item>
+
+
+  </ion-list>
+
+  <div class="auth-btn-cover">
+    <button class="custom-button" (click)="post(name,brewer,date,price,serving,rating,des)">Post</button>
+  </div>
+
+
+
+</ion-content>

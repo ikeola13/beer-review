@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,85 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+$font-family-base: "Oxygen", sans-serif !default;
+
+ion-fab-button .button-native {
+  --background-color: #ff6600;
+}
+
+ion-rating {
+  --color: gray !important;
+  --color-filled: green !important;
+}
+
+a {
+  text-decoration: none;
+  color: sandybrown;
+}
+
+.formm {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.swal2-confirm .swal2-styled {
+  background-color: sandybrown !important;
+}
+
+.auth-buttons {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.auth-btn-cover {
+  margin: 10px 0px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.custom-button {
+  padding: 15px;
+  width: 80%;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #f1a851;
+}
+
+.swal2-styled.swal2-confirm {
+  border: 0;
+  border-radius: 0.25em;
+  background: initial;
+  background-color: sandybrown !important;
+  color: #fff;
+  font-size: 1.0625em;
+}
+
+.swal2-popup .swal2-styled:focus {
+  box-shadow: none !important;
+}
+
+.info {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  line-height: 1.5em;
+}
+
+.page-title {
+  padding-top: 15px;
+  font-size: 20px;
+  padding-bottom: 20px;
+  background: url("assets/images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.lin {
+  line-height: 1.5em;
+}

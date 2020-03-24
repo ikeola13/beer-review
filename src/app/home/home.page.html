@@ -1,20 +1,23 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="logo">
+    <img src="assets/images/logo.png" width="80%" />
   </div>
+  <div class="title">
+    Welcome to the best Beer review app.<br><br>
+    You can Post and Read reviews of your favorite brands of beer.
+  </div>
+
+  <div class="button-section">
+
+
+    <div class="auth-btn-cover">
+      <button class="custom-button" (click)="register()">Register</button>
+    </div>
+
+    <div class="auth-btn-cover">
+      <button class="custom-button" (click)="login()">Login</button>
+    </div>
+
+  </div>
+
 </ion-content>

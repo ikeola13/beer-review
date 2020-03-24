@@ -1,0 +1,39 @@
+<ion-content>
+
+  <div class="page-title">
+    Login
+  </div>
+  <div class="info">
+    You need to login to read and post reviews.
+  </div>
+
+  <form class="formm">
+
+
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label position="stacked">Username <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input class="inp lin" required type="text" #username></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Password <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input class="inp lin" required type="password" #password></ion-input>
+      </ion-item>
+
+
+    </ion-list>
+
+    <div class="auth-btn-cover">
+      <button class="custom-button" (click)="login(username,password)">Login</button>
+    </div>
+
+    <div><a routerLink="/">Home</a> | <a routerLink="/register">Register</a></div>
+
+  </form>
+
+
+
+</ion-content>

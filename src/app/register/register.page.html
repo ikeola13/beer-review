@@ -1,0 +1,45 @@
+<ion-content>
+
+  <div class="page-title">
+    Create An Account
+  </div>
+  <div class="info">
+    You need to create an account before you can start posting reviews.
+  </div>
+
+  <form class="formm">
+
+
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label position="stacked">Username <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input class="inp lin" required type="text" #username></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Email <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input class="inp lin" required type="email" #email></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Password <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input class="inp lin" required type="password" #password></ion-input>
+      </ion-item>
+
+
+    </ion-list>
+
+    <div class="auth-btn-cover">
+      <button class="custom-button" (click)="register(username,email,password)">Create</button>
+    </div>
+
+    <div><a routerLink="/">Home</a> | <a routerLink="/login">Login</a></div>
+
+  </form>
+
+
+
+</ion-content>
