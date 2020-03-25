@@ -54,7 +54,7 @@ export class LoginPage implements OnInit {
       icon: icon,
       confirmButtonText: 'Ok'
     }).then(() => {
-      this.router.navigate(['/dashboard'])
+      this.router.navigate(['/menu/dashboard'])
     })
   }
 }

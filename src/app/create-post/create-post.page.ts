@@ -30,7 +30,7 @@ export class CreatePostPage implements OnInit {
     });
   }
 
-  post(name, brewer, date, price, serving, rating, des) {
+  post(name, brewer, date, price, serving, flavor,rating, des) {
 
     // if posts array is empty, set it to an empty array
     if (this.post_list == null) {
@@ -44,6 +44,7 @@ export class CreatePostPage implements OnInit {
       date: date.value,
       price: price.value,
       serving: serving.value,
+      flavor: flavor.value,
       rating: rating.value,
       des: des.value
     })

@@ -14,6 +14,7 @@ export class ViewPostPage implements OnInit {
   brewer;
   price;
   serving;
+  flavor;
   rating;
   des;
   posted;
@@ -41,6 +42,7 @@ export class ViewPostPage implements OnInit {
       this.brewer = val[this.post_id].brewer;
       this.price = val[this.post_id].price;
       this.serving = val[this.post_id].serving;
+      this.flavor = val[this.post_id].flavor;
       this.rating = val[this.post_id].rating;
       this.des = val[this.post_id].des;
       this.posted = val[this.post_id].date;

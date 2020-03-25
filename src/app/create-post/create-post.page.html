@@ -40,6 +40,19 @@
     </ion-item>
 
     <ion-item>
+      <ion-label position="stacked">Flavor<ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-select value="crisp" okText="Okay" cancelText="Dismiss" #flavor>
+        <ion-select-option value="crisp">Crisp</ion-select-option>
+        <ion-select-option value="hop">Hop</ion-select-option>
+        <ion-select-option value="malt">Malt</ion-select-option>
+        <ion-select-option value="dark">Dark</ion-select-option>
+        <ion-select-option value="smoke">Smoke</ion-select-option>
+        <ion-select-option value="fruit">Fruit</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
       <ion-label position="stacked">Rating <ion-text color="danger">*</ion-text>
       </ion-label>
       <ion-select value="1" okText="Okay" cancelText="Close" #rating>
@@ -61,7 +74,7 @@
   </ion-list>
 
   <div class="auth-btn-cover">
-    <button class="custom-button" (click)="post(name,brewer,date,price,serving,rating,des)">Post</button>
+    <button class="custom-button" (click)="post(name,brewer,date,price,serving,flavor,rating,des)">Post</button>
   </div>
 
 
