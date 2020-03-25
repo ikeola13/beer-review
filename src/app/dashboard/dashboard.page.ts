@@ -33,7 +33,7 @@ export class DashboardPage implements OnInit {
     console.log(val);
     this.rev = val;
      console.log(this.rev.length)
-    if (this.rev.length === 0) {
+    if (this.rev !== null) {
       this.reviews = true
     }
   });
@@ -47,7 +47,7 @@ export class DashboardPage implements OnInit {
     console.log(val);
     this.rev = val;
 
-    if (this.rev.length === 0 ) {
+    if (this.rev !== null ) {
       this.reviews = true
     }
   });

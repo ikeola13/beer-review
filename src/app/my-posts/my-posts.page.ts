@@ -63,7 +63,7 @@ export class MyPostsPage implements OnInit {
     });
     modal.onDidDismiss()
       .then(() => {
-        this.ngOnInit()
+        this.ionViewWillEnter()
       });
     return await modal.present();
   }

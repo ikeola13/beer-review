@@ -58,16 +58,28 @@ export class EditPostPage implements OnInit {
   }
 
   post(name, brewer, date, price, serving, flavor,rating, des) {
+    let updatedData = {
+      name: name.value,
+      brewer: brewer.value,
+      date: date.value,
+      price: price.value,
+      serving: serving.value,
+      flavor: flavor.value,
+      rating: rating.value,
+      des: des.value
+    }
 
-    
+    this.storage.get('arr').then(valueStr => {
+      console.log(valueStr[this.main_post_id]);
+  
+       // Modify just that property
+       valueStr[this.main_post_id] = updatedData;
+  
+      //Save the entire data again
+       this.storage.set('arr', valueStr);
 
-    
-    // this.storage.set('arr', this.post_list);
-
-    // this.storage.get('arr').then((items) => {
-    //   console.log(items);
-    // });
-
+       this.ngOnInit();
+  });
     this.dismiss();
   }
 }
