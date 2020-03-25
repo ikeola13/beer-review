@@ -14,13 +14,14 @@ import { CreatePostPage } from './create-post/create-post.page';
 import { IonicRatingModule } from 'ionic-rating';
 import { IonicStorageModule } from '@ionic/storage';
 import { ViewPostPage } from './view-post/view-post.page';
+import { EditPostPage } from './edit-post/edit-post.page';
 
 
 
 
 @NgModule({
-  declarations: [AppComponent, LoginPipe, CreatePostPage, ViewPostPage],
-  entryComponents: [CreatePostPage,ViewPostPage],
+  declarations: [AppComponent, LoginPipe, CreatePostPage, ViewPostPage,EditPostPage],
+  entryComponents: [CreatePostPage,ViewPostPage,EditPostPage],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, IonicRatingModule, IonicStorageModule.forRoot()],
   providers: [
     StatusBar,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class MenuPage implements OnInit {
 
   navigate : any;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.sideMenu();
@@ -22,10 +23,26 @@ export class MenuPage implements OnInit {
         url   : "/menu/dashboard"
       },
       {
+        title : "User Profile",
+        url   : "/menu/profile"
+      },
+      {
+        title : "My posts",
+        url   : "/menu/my-posts"
+      },
+      {
         title : "Settings",
         url   : "/menu/settings"
       },
+      {
+        title : "Sign Out",
+        url   : "/login"
+      },
     ]
+  }
+
+  gotoPage(url){
+    this.router.navigate([url])
   }
 
 }

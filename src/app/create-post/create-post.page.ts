@@ -51,6 +51,10 @@ export class CreatePostPage implements OnInit {
 
     this.storage.set('arr', this.post_list);
 
+    this.storage.get('arr').then((items) => {
+      console.log(items);
+    });
+
     this.dismiss();
   }
 

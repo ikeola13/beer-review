@@ -25,22 +25,32 @@ export class DashboardPage implements OnInit {
 
   reviews = false;
 
-  rate = 4;
-
   constructor(public modalController: ModalController, public dataservice: DataService, private storage: Storage, private menu: MenuController) { }
 
   ngOnInit() {
-    //get posts from storage and save in rev
-    this.storage.get('arr').then((val) => {
-      console.log(val);
-      this.rev = val;
+  //get posts from storage and save in rev
+  this.storage.get('arr').then((val) => {
+    console.log(val);
+    this.rev = val;
+     console.log(this.rev.length)
+    if (this.rev.length === 0) {
+      this.reviews = true
+    }
+  });
 
-      if (this.rev !== null) {
-        this.reviews = true
-      }
-    });
 
+  }
 
+  ionViewWillEnter(){
+  //get posts from storage and save in rev
+  this.storage.get('arr').then((val) => {
+    console.log(val);
+    this.rev = val;
+
+    if (this.rev.length === 0 ) {
+      this.reviews = true
+    }
+  });
   }
 
   //  opens modal to create post
