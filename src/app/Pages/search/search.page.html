@@ -37,10 +37,10 @@
   <ion-grid>
     <ion-row>
       <ion-col size="12" *ngFor="let item of searchResult; let i = index ">
-        <ion-card (click)="viewModal(i)">
+        <ion-card (click)="viewModal(i)" style="--background: white">
           <ion-card-header>
             <ion-card-subtitle>Brewer: {{item.brewer}}</ion-card-subtitle>
-            <ion-card-title>{{item.name}}</ion-card-title>
+            <ion-card-title style="color:black">{{item.name}}</ion-card-title>
           </ion-card-header>
   
   
@@ -60,7 +60,7 @@
   </ion-grid>
 </div>
 <div *ngIf="!results">
-No Result to display
+Nothing to display
 </div>
 
 

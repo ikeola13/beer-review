@@ -38,6 +38,9 @@
       Reviews
     </div>
 
+    <div *ngIf="!reviews" class="norevs">
+      Nothing to display.
+    </div>
     <div *ngIf="reviews">
       <ion-grid>
         <ion-row>
@@ -64,9 +67,7 @@
         </ion-row>
       </ion-grid>
     </div>
-    <div *ngIf="!reviews" class="norevs">
-      No Reviews yet
-    </div>
+    
   </div>
 
 </ion-content>

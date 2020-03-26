@@ -103,11 +103,27 @@
 
 
 
+:focus {
+  outline: none !important;
+  }
 
 
+  .alert-title.sc-ion-alert-ios {
+    margin-top: 8px;
+    color: black !important;
+    font-size: 17px;
+    font-weight: 600;
+}
 
-
-
+.alert-radio-label.sc-ion-alert-ios {
+  padding-left: unset;
+  padding-right: unset;
+  -webkit-padding-start: 13px;
+  padding-inline-start: 13px;
+  -webkit-padding-end: 13px;
+  padding-inline-end: 13px;
+  color: black !important;
+}
 
 
 

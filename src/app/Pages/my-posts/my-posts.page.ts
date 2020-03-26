@@ -34,7 +34,7 @@ export class MyPostsPage implements OnInit {
 
       this.allReviews = val;
 
-      if (this.allReviews !== []) {
+      if (this.allReviews.length > 0) {
         this.reviews = true
       }
     });
@@ -90,7 +90,17 @@ export class MyPostsPage implements OnInit {
 
 
 
+        
         this.storage.set('arr', this.allReviews);
+        this.storage.get('arr').then((val) => {
+    
+          if (val.length > 0) {
+            this.reviews = true
+          }else{
+            this.reviews = false
+          }
+        });
+        
 
         Swal.fire(
           'Deleted!',

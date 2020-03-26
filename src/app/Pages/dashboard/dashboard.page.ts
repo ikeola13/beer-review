@@ -27,9 +27,15 @@ export class DashboardPage implements OnInit {
   this.storage.get('arr').then((value) => {
    
     this.allReviews = value;
-    if (this.allReviews !== null) {
-      this.reviews = true
-    } 
+    // if (this.allReviews !== null) {
+    //   this.reviews = true
+    // } 
+    if (this.allReviews == null) {
+      this.storage.set('arr', []);
+    }
+    if (this.allReviews.length > 0) {
+      this.reviews = true;
+    }
   });
 
 
@@ -40,10 +46,15 @@ export class DashboardPage implements OnInit {
   this.storage.get('arr').then((val) => {
     
     this.allReviews = val;
+    console.log(val);
 
-    if (this.allReviews !== null ) {
-      this.reviews = true
+    if (this.allReviews == null) {
+      this.storage.set('arr', []);
     }
+    if (this.allReviews.length > 0) {
+      this.reviews = true;
+    }
+
   });
   }
 

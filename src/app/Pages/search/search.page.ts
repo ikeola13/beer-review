@@ -38,12 +38,6 @@ export class SearchPage implements OnInit {
     this.storage.get('arr').then((val) => {
       this.allPosts = val;
 
-      if(val){
-this.results = true
-      }else{
-        this.results = false
-      }
-      
     });
 
 
@@ -59,7 +53,7 @@ this.results = true
   }
 
   submit(){
-   
+   this.results = true;
 
 
     let id_filter = this.flavorArray;
@@ -68,6 +62,10 @@ this.results = true
 });
 
 this.searchResult = filtered;
+
+if(this.searchResult.length == 0){
+  this.results = false;
+}
    
   
   }
