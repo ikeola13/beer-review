@@ -107,4 +107,11 @@ a {
   line-height: 1.5em;
 }
 
+.checkbox-icon{
+  border: 1px solid var(--ion-color-primary) !important;
+}
 
+.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
+  background: red !important; 
+  border-color: red !important;
+}

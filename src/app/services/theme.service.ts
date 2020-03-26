@@ -39,6 +39,7 @@ export class ThemeService {
           { themeVariable: '--ion-background-color', value: '#ffffff'},
           { themeVariable: '--ion-text-color', value: '#000000'}, 
           { themeVariable: '--ion-toolbar-background', value: '#ffffff'},
+          { themeVariable: '--ion-checkbox-background', value: '#f1a851'},
 
         ]
       },
