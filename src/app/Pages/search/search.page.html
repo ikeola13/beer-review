@@ -1,0 +1,72 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>Search By Flavour</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+  <ion-fab vertical="top" horizontal="start" slot="fixed" (click)="openMenu()" style="bottom: 50px;">
+    <ion-fab-button>
+      <ion-icon name="menu"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <div class="page-title">
+    Flavors
+  </div>
+
+<ion-grid style="text-align: center;">
+  <ion-row>
+    <ion-col size="4" *ngFor="let entry of form">
+      <ion-label>{{entry.val}}</ion-label><br>
+      <ion-checkbox [(ngModel)]="entry.isChecked" (ionChange)="flavors($event,entry.val)" ></ion-checkbox>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<br>
+
+<ion-button color="primary" expand="block" (click)="submit()">Search</ion-button>
+
+
+<div class="result-title">Result</div>
+<div *ngIf="results">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" *ngFor="let item of searchResult; let i = index ">
+        <ion-card (click)="viewModal(i)">
+          <ion-card-header>
+            <ion-card-subtitle>Brewer: {{item.brewer}}</ion-card-subtitle>
+            <ion-card-title>{{item.name}}</ion-card-title>
+          </ion-card-header>
+  
+  
+          <ion-card-content>
+            Description: <br>
+            {{item.des}}
+            <br>
+            <ion-rating rate={{item.rating}} readonly="false" size="default">
+            </ion-rating>
+            <br>
+            Posted on {{item.date}}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+  
+    </ion-row>
+  </ion-grid>
+</div>
+<div *ngIf="!results">
+No Result to display
+</div>
+
+
+
+
+
+
+</ion-content>
+ 

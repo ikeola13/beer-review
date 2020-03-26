@@ -1,0 +1,72 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons></ion-toolbar>
+</ion-header> -->
+
+<!-- content -->
+<ion-content [fullscreen]="true">
+  <div class="logo">
+    <img src="assets/images/logo.png" width="50%" />
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="presentModal()" style="bottom: 50px;" >
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab vertical="top" horizontal="start" slot="fixed" (click)="openMenu()" style="height: 10px;">
+    <ion-fab-button>
+      <ion-icon name="menu"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <div class="des">
+    Click on a review to read it.
+    <br>
+    <br>
+    Also click on the plus sign on the bottom right of the page to add a review
+    <br>
+    <br>
+    <ion-button color="primary" routerLink="/menu/search"> Search Posts by Flavor</ion-button>
+  </div>
+
+  <div class="rev-body">
+    <div class="rev-title">
+      Reviews
+    </div>
+
+    <div *ngIf="reviews">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" *ngFor="let item of allReviews; let i = index ">
+            <ion-card (click)="viewModal(i)">
+              <ion-card-header>
+                <ion-card-subtitle>Brewer: {{item.brewer}}</ion-card-subtitle>
+                <ion-card-title>{{item.name}}</ion-card-title>
+              </ion-card-header>
+
+
+              <ion-card-content>
+                Description: <br>
+                {{item.des}}
+                <br>
+                <ion-rating rate={{item.rating}} readonly="false" size="default">
+                </ion-rating>
+                <br>
+                Posted on {{item.date}}
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div *ngIf="!reviews" class="norevs">
+      No Reviews yet
+    </div>
+  </div>
+
+</ion-content>

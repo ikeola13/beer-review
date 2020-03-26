@@ -1,0 +1,63 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>My Posts</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<!-- content -->
+<ion-content [fullscreen]="true">
+
+  <ion-fab vertical="top" horizontal="start" slot="fixed" (click)="openMenu()" style="bottom: 50px;">
+    <ion-fab-button>
+      <ion-icon name="menu"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <div class="page-title">
+    My Posts
+  </div>
+
+
+  
+
+  <div class="rev-body">
+    <div *ngIf="reviews">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" *ngFor="let item of allReviews; let i = index ">
+            <ion-card>
+              <ion-card-header>
+                <ion-card-subtitle>Brewer: {{item.brewer}}</ion-card-subtitle>
+                <ion-card-title>{{item.name}}</ion-card-title>
+              </ion-card-header>
+
+
+              <ion-card-content>
+                Description: <br>
+                {{item.des}}
+                <br>
+                <ion-rating rate={{item.rating}} readonly="false" size="default">
+                </ion-rating>
+                <br>
+                Posted on {{item.date}}
+
+                <div class="actions">
+                  <ion-icon name="pencil-outline" class="icon"  (click)="editModal(i)"></ion-icon>&nbsp;
+                  <ion-icon name="trash-outline" class="icon"  (click)="deleteModal(i)"></ion-icon>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div *ngIf="!reviews" class="norevs">
+      No Reviews yet
+    </div>
+  </div>
+
+</ion-content>

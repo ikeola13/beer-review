@@ -10,35 +10,35 @@ const routes: Routes = [
     children: [
       {
         path: 'dashboard',
-        loadChildren: () => import('../dashboard/dashboard.module').then(m => m.DashboardPageModule)
+        loadChildren: () => import('../Pages/dashboard/dashboard.module').then(m => m.DashboardPageModule)
       },
       {
         path: 'create-post',
-        loadChildren: () => import('../create-post/create-post.module').then(m => m.CreatePostPageModule)
+        loadChildren: () => import('../Modals/create-post/create-post.module').then(m => m.CreatePostPageModule)
       },
       {
         path: 'view-post',
-        loadChildren: () => import('../view-post/view-post.module').then(m => m.ViewPostPageModule)
+        loadChildren: () => import('../Modals/view-post/view-post.module').then(m => m.ViewPostPageModule)
       },
       {
         path: 'settings',
-        loadChildren: () => import('../settings/settings.module').then(m => m.SettingsPageModule)
+        loadChildren: () => import('../Pages/settings/settings.module').then(m => m.SettingsPageModule)
       },
 
       {
         path: 'my-posts',
-        loadChildren: () => import('../my-posts/my-posts.module').then(m => m.MyPostsPageModule)
+        loadChildren: () => import('../Pages/my-posts/my-posts.module').then(m => m.MyPostsPageModule)
       },
       {
         path: 'search',
-        loadChildren: () => import('../search/search.module').then(m => m.SearchPageModule)
+        loadChildren: () => import('../Pages/search/search.module').then(m => m.SearchPageModule)
       },
       {
         path: 'profile',
-        loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule)
+        loadChildren: () => import('../Pages/profile/profile.module').then(m => m.ProfilePageModule)
       }, {
         path: 'edit-post',
-        loadChildren: () => import('../edit-post/edit-post.module').then(m => m.EditPostPageModule)
+        loadChildren: () => import('../Modals/edit-post/edit-post.module').then(m => m.EditPostPageModule)
       }
     ]
   }

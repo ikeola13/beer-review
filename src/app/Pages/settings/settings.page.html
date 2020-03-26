@@ -1,0 +1,28 @@
+<!-- <ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>settings</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<!-- content -->
+<ion-content>
+
+  <ion-fab vertical="top" horizontal="start" slot="fixed" (click)="openMenu()" style="bottom: 50px;">
+    <ion-fab-button>
+      <ion-icon name="menu"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <div class="page-title">
+    Settings 
+  </div>
+
+  <div>
+    {{mode}} Dark Mode :<br>
+    <ion-toggle [(ngModel)]="darkmode"  (ionChange)="status($event)"></ion-toggle>
+  </div>
+  
+</ion-content>

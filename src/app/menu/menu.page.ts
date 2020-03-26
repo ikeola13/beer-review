@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterEvent } from '@angular/router';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-menu',
@@ -8,15 +9,21 @@ import { Router } from '@angular/router';
 })
 export class MenuPage implements OnInit {
 
-  navigate : any;
-  constructor(private router: Router) { }
+  selectedPath = '';
+
+  menulist: any;
+  constructor(private router: Router,private storage: Storage) { 
+    this.router.events.subscribe((event:RouterEvent) =>{
+      this.selectedPath = event.url;
+    });
+  }
 
   ngOnInit() {
     this.sideMenu();
   }
 
   sideMenu(){
-    this.navigate =
+    this.menulist =
     [
       {
         title : "Dashboard",
@@ -41,8 +48,9 @@ export class MenuPage implements OnInit {
     ]
   }
 
-  gotoPage(url){
+  logout(url){
     this.router.navigate([url])
   }
+
 
 }

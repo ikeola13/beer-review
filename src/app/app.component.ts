@@ -27,4 +27,7 @@ export class AppComponent {
       this.statusBar.backgroundColorByHexString('#f1a851');
     });
   }
+
+
+
 }
