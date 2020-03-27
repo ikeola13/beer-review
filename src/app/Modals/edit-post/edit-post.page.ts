@@ -17,7 +17,7 @@ export class EditPostPage implements OnInit {
   @Input() id: string;
 
   main_post_id;
-  temp_array : any[];
+  public temp_array : any;
   display_array;
 
   name;
