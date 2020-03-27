@@ -27,7 +27,6 @@ import { FormsModule } from '@angular/forms';
   providers: [
     StatusBar,
     SplashScreen,
-    Document,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
